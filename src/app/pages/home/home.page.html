@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Home</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+        <ion-row *ngFor="let usuarios of misUsuarios">
+            <ion-col>
+                <ion-card>
+                    <ion-card-content>
+
+                        <ion-item>
+                            Nombre: {{usuarios.nombre}}
+                        </ion-item>
+                        <ion-item>
+                            Apellido: {{usuarios.apellido}}
+                        </ion-item>
+                        <ion-item>
+                            DNI: {{usuarios.dni}}
+                        </ion-item>
+
+                    </ion-card-content>
+
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col>
+                                <ion-button expand="block" (click)="navegarUpdate(usuarios.id)">UPDATE</ion-button>
+                            </ion-col>
+                            <ion-col>
+                                <ion-button expand="block" color="danger" (click)="eliminarUsuario(usuarios.id)">DELETE</ion-button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<ion-footer>
+    <ion-button expand="block" fill="outline" [routerLink]="['/create']">AGREGAR USUARIO</ion-button>
+</ion-footer>
