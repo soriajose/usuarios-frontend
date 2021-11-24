@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>update-create</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <form [formGroup]="formUsuario" (ngSubmit)="updateCreateUsuario()">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Nombre: </ion-label>
+        <ion-input type="text" formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Apellido: </ion-label>
+        <ion-input type="text" formControlName="apellido"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>DNI: </ion-label>
+        <ion-input type="text" formControlName="dni"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    </form>  
+
+</ion-content>
+
+
+<ion-footer>
+    
+    <ion-button (click)="updateCreateUsuario()" *ngIf="usuario.id==0"  expand="block" color="primary" >CREATE</ion-button>
+    <ion-button (click)="updateCreateUsuario()" *ngIf="usuario.id>0"  expand="block" color="secondary">UPDATE</ion-button>
+    <ion-button expand="block" color="danger" routerLink="/home">CANCEL</ion-button>
+
+</ion-footer>

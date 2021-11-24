@@ -41,9 +41,14 @@ export class HomePage implements OnInit {
     );
     this.presentToast('Se eliminó correctamente!');
   }
-
+/*
   navegarUpdate(id: number){
     this.router.navigate(['update', id]);
+  }
+*/
+  navegarUpdateCreate(id: number){
+    console.log('Navigate', id);
+    this.router.navigate(['update-create', id]);
   }
 
 }

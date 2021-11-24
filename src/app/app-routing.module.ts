@@ -12,13 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'update/:id',
-    loadChildren: () => import('./pages/update/update.module').then( m => m.UpdatePageModule)
+    path: 'update-create/:id',
+    loadChildren: () => import('./pages/update-create/update-create.module').then( m => m.UpdateCreatePageModule)
   },
-  {
-    path: 'create',
-    loadChildren: () => import('./pages/create/create.module').then( m => m.CreatePageModule)
-  },
+
 ];
 
 @NgModule({
