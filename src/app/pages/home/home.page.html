@@ -39,9 +39,17 @@
             </ion-col>
         </ion-row>
     </ion-grid>
-
+    <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button [routerLink]="['/create']">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>
 
-<ion-footer>
+<!--
+    <ion-footer>
+
     <ion-button expand="block" fill="outline" [routerLink]="['/create']">AGREGAR USUARIO</ion-button>
-</ion-footer>
+
+    </ion-footer>
+-->
